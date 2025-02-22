@@ -27,7 +27,7 @@ with open("Hokkaido_OD_GeoDataBase2018.csv", "r", encoding="cp932") as file:
         [facility_name, city_name, lat, long, _, _, _, _, _, _] = row
         if is_city_hall(facility_name):
             pron = city_prons[city_name]
-            cities.append({"facility_name": facility_name, "city_name": city_name, "pron": pron, "lat": lat, "long": long})
+            cities.append({"city_name": city_name, "pron": pron, "lat": lat, "long": long})
 
 # jsonとして吐き出す
 with open("city_data.json", "w") as write_file:
